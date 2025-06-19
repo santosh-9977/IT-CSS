@@ -1,0 +1,467 @@
+
+
+Box Model  : 
+-----------------
+
+Boxmodel tells about, the element structure.
+
+HTML Element ,
+
+   <h1> This is heading </h1>
+
+   <p> This is para </p>
+
+   <div> This is div tag </div>
+
+   <span> This is span tag </span>
+
+   ------->
+
+   Each HTML element having 4 parts,
+
+    1) Content  
+
+    2) Border 
+    
+    3) Padding  
+    
+    4) Margin.
+
+    -------->
+
+     1) Content :
+     ----------------
+
+        Text, which is visible in the browser.
+          
+        Text between open and closing element.
+
+        Ex:
+        ----
+
+          <div> Sachin </div>
+
+          Here Content is : Sachin 
+
+    ---------->
+    
+     2) Border :
+     ---------------
+
+        To represent the bounds of your element.
+
+    Ex:
+    ----
+
+			<!DOCTYPE html>
+			<html lang="en">
+			<head>
+			    
+			    <title>CSS - Box Model </title>
+
+			    <style>
+			        div {
+			            border : 1px solid red ; 
+			        }
+			    </style>
+
+			</head>
+			<body>
+
+			     <h1> Box Model  Demo  </h1>
+
+			     <div>Sachin</div>
+			     
+			</body>
+			</html>
+
+------------------->      
+
+HTML DIV Tag :
+---------------  
+
+  The "div" tag is known as Division tag.
+
+ The "div" tag is used in HTML to make divisions of content in the web page like (text, images, header, footer, navigation bar, etc). 
+
+ "div" tag has both open (<div>) and closing (</div>) tag and it is mandatory to close the tag. 
+
+ The Div is the most usable tag in web development because it helps us to separate out data in the web page and we can create a particular section for particular data or function in the web pages.
+
+
+ "div" tag is Block level tag.
+ "div" tag  acts like a container . It group all the elements in the "div" tag. 
+
+ The "div" tag contains entire width of the browser .  
+
+ Hence, every "div" tag will start from a new line, and not the same line.
+
+ ----->
+
+  Ex:
+  --------
+
+   "div" tag with inline styling 
+
+
+                  divInline.html 
+    ------------------------------------------------------
+    
+    <html>
+   <head>
+      <title>
+          CSS - Inline 
+      </title>
+   </head>
+   <body>
+      
+
+         <div style="height:300px; width:500px; color:white; border:1px solid; background-color: 009900;">
+            <!--open tag of Div!-->
+          
+               <h1> TJPS College </h1>
+            
+            <h1>
+                
+                Inline CSS is USED in this tag.
+               
+            </h1>
+         </div>
+         <!--closing tag of Div!-->
+
+      
+   </body>
+</html>
+
+ -------------->    
+
+ Ex:
+ --------
+   "div" tag group all the elements .
+
+  "div" tag with Internal Style .
+
+                     div2.html 
+    ------------------------------------------
+    
+<html>
+
+<head>
+    <title>
+        CSS - Inline
+    </title>
+    <style>
+        #p1 {
+            color: red;
+
+        }
+
+        div {
+
+            height: 300px;
+            width: 500px;
+            color: white;
+            border: 1px solid;
+            background-color: 009900;
+
+        }
+    </style>
+</head>
+
+<body>
+   
+
+        <div>
+            <!--open tag of Div!-->
+            
+                <h1> TJPS College </h1>
+            
+            <h1> Inline CSS is USED in this tag. </h1>
+            <p id="p1"> This is Paratag </p>
+        </div>
+        <!--closing tag of Div!-->
+
+
+</body>
+
+</html>
+
+----------------------------->
+
+Ex:
+----
+
+   Same above example , without "div" tag .
+
+   It shows each element separatly.
+
+
+                        div3.html 
+        ------------------------------------------------
+
+  <html>
+
+<head>
+    <title>
+        CSS - Inline
+    </title>
+    <style>
+
+        h1 {
+            color : blue; 
+        }
+        #p1 {
+            color: red;
+
+        }
+
+        div {
+
+            height: 300px;
+            width: 500px;
+            color: white;
+            border: 1px solid;
+            background-color: 009900;
+
+        }
+    </style>
+</head>
+
+<body>
+            <h1> TJPS College </h1>
+         
+            <h1> Inline CSS is USED in this tag. </h1>
+            <p id="p1"> This is Paratag </p>
+        
+
+</body>
+
+</html>
+
+------------------>       
+
+3) Padding  :
+---------------
+
+The gap between content to border.
+
+We can give padding to element in four directions(left, right, top, bottom).
+
+By using "padding-left", "padding-right", "padding-top", "padding-bottom" css propertes,
+we can apply padding to element.
+
+By using padding css property , we can apply padding left, right, top, bottom.
+
+Padding property values always take in clock wise direction.
+
+Ex:
+
+   padding : 30px 
+
+       means padding top, right, bottom, left values are 30px;
+
+------------>
+
+Ex: 
+
+  padding:30px 20px 
+
+    means padding top is 30px,  rigth is 20px, bottom is 30px and left is 20px.
+
+---------->
+
+Ex: 
+
+  padding:30px 20px 40px 
+
+          means padding top is 30px,  rigth is 20px, bottom is 40px and left is 20px.
+
+
+----------->
+
+
+Ex: 
+
+  padding : 30px 20px 40px 50px 
+
+       means padding top is 30px,   rigth is 20px, bottom is 40px and left is 50px.
+
+---------------->
+
+Ex:
+
+    padding : 10px 20px 30px;
+
+       means padding top is 10px,  rigth is 20px, bottom is 30px and left is 20px.
+
+              padding.html 
+    ----------------------------------------------
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title> Box Model - Padding Demo </title>
+
+    <style>
+        div {
+
+            border : 1px solid red ;
+            padding : 10px 20px 30px;
+        }
+    </style>
+
+</head>
+<body>
+     <h1> Box Model - Padding Demo </h1>
+ 
+     <div>Sachin</div>
+
+</body>
+</html>
+
+ ------------------>      
+
+ 4) Margin :
+ -----------------
+
+   The gap between one element border to another element border.
+
+   We can give margin to element in four directions(left,right,top,bottom)
+
+   By using   "margin-left" , "margin-right" , "margin-top", "margin-bottom" css propertes,
+
+    we can apply margin to element.
+
+    By using margin css property also , we can apply margin left,right,top, bottom.
+
+    margin property values always take in clock wise direction.
+
+    Ex:
+
+       margin : 30px 
+                means margin top, right, bottom, left values are 30px
+
+    ----------->
+
+    Ex: 
+       margin : 30px 20px 
+
+                 means margin top is 30px,  rigth is 20px, bottom is 30px and left is 20px.
+
+    ---------->
+
+    Ex: 
+
+            margin:30px 20px 40px 
+
+              means margin top is 30px,   rigth is 20px, bottom is 40px and left is 20px.
+
+    ---------->
+    
+   Ex: 
+
+      margin : 30px 20px 40px 50px 
+             means margin top is 30px,   rigth is 20px, bottom is 40px and left is 50px.
+
+
+    -------------->
+
+    Ex:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title> Box Model - Margin Demo </title>
+
+    <style>
+
+        #div1 {
+            border : 1px solid red ;
+            margin-bottom : 10px ;
+        }
+
+        #div2 {
+            border : 1px solid red ; 
+            margin-top : 10px ; 
+        }
+   </style>
+
+
+</head>
+<body>
+     <h1> Box Model - Margin Demo </h1>
+
+      <div id="div1"> Sachin </div>
+      
+      <div id="div2"> Dhoni </div>
+
+
+</body>
+</html>
+
+
+===========================================================================================
+
+
+    
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

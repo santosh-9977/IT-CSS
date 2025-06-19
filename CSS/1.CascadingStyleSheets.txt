@@ -1,0 +1,1558 @@
+
+
+              CSS(Cascading Style Sheets)
+            --------------------------------------
+            
+            CSS Versions 2 & 3 
+
+
+Fundamentals Of CSS (Cascading Style Sheets) :
+-------------------------------------------------
+
+
+CSS Stands for "Cascading Style Sheets".
+
+CSS is a "Styling language" , which is used to apply styles to the html elements in the web page.
+
+CSS styles include with backgrounds, colors, margins, borders, paddings, allignments etc., 
+
+--------->
+
+Syntax :
+
+    <style type="text/css">
+
+       CSS code 
+
+    </style>
+    
+-------------->
+
+
+Syntax of CSS style definition :
+-------------------------------------
+
+  selector 
+  {
+    property : value; 
+
+    property : value;
+
+  }
+
+  ----------->
+
+  CSS basic Selectors :
+  ------------------------
+
+  "select" is the syntax to select the desired elements .
+
+  CSS supports many selectors .
+  The most important CSS selectors are ,
+
+  1) Tag Selector 
+
+  2) ID Selector 
+
+  ------------>
+
+  1. Tag Selector :
+  ---------------------
+
+   The "tag selector" selects all the instances of specific tag.
+
+   Use tag selector to select multiple elements .
+
+   Syntax :
+
+         tagname 
+
+
+    Ex:
+        h1 tag , p tag etc., 
+
+  ----------->
+  
+  2) ID Selector :
+  -----------------
+
+  The "id selector" selects a single tag, based on the "id"
+
+  "ID" is the "Identification name" . It must be unique.
+
+  Use "ID" selector to select a exact single element .
+
+  "#"(hash) is the symbol of "ID"
+
+    syntax: 
+             #id 
+
+    Ex:
+    ----
+
+      #p1 , #h1 etc., 
+
+
+ ----------------->
+
+ Ex:
+ ------
+
+   Example on Tag Selector . 
+
+                           css.html 
+    ----------------------------------------------------------
+    
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <title>CSS - Tag Selector </title>
+
+    <style type="text/css">
+        h1 {
+            color: red;
+        }
+
+        p {
+            color: rgb(0, 255, 0);
+        }
+
+        div {
+            color: rgb(0, 0, 255)
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> Cascading Style Sheets </h1>
+
+    <p> This is Para 1</p>
+    <p> This is Para 2</p>
+    <p> This is Para 3</p>
+
+    <div> This is div tag </div>
+
+
+
+</body>
+
+</html>
+
+-------------->
+
+Example on ID Selector :
+---------------------------  
+
+             cssid.html 
+    ---------------------------------------------
+    
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>CSS - ID Selector </title>
+    <style type="text/css">
+        #h1 {
+            color: yellow;
+        }
+
+        #p3 {
+            color: violet;
+        }
+
+        #div2 {
+            color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="h1"> Cascading Style Sheets </h1>
+
+    <p> This is Para 1</p>
+    <p> This is Para 2</p>
+    <p id="p3"> This is Para 3</p>
+
+    <div> This is div tag 1</div>
+
+    <div id="div2"> This is div tag 2</div>
+
+
+
+</body>
+
+</html>
+
+ ---------------------->
+
+ CSS Properties :
+ -------------------
+
+   Properties are details or settings of html tag .
+
+   Every property contains a value 
+
+   Syntax:
+
+      property : value 
+
+      Ex:
+
+        color : green; 
+
+   ------------>
+
+   1) color :
+   ------------
+
+   This property specifies text color of the element .
+
+   You can specify any color of your choice .
+
+
+   Syntax:
+
+       color : colorname
+
+    Ex:
+    ---
+
+       color : green 
+
+  ----------->
+  
+  Ex:
+  ---
+     Example on color property 
+
+              csscolor.html 
+    ----------------------------------------------
+    
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>CSS - COLOR </title>
+    <style type="text/css">
+        #p1 {
+            color: yellow;
+        }
+
+        #p2 {
+            color: violet;
+        }
+
+        #p3 {
+            color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> Cascading Style Sheets - Color property </h1>
+
+    <p id="p1"> This is Para 1</p>
+    <p id="p2"> This is Para 2</p>
+    <p id="p3"> This is Para 3</p>
+
+</body>
+
+</html>
+
+ ---------------->
+
+ 2) background-color :
+ -------------------------
+
+   This property specifies the background color of the element .
+
+   You can set any color as background color. 
+
+   Syntax:
+           background-color : colorname ;
+
+    Ex:
+    ----
+             background-color : yellow; 
+
+
+ --------->
+ 
+ 	Ex:
+ 	--------
+
+ 	              cassbackgroundcolor.html 
+ 	    ---------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>CSS - BACKGROUND COLOR </title>
+    <style type="text/css">
+        #p1 {
+            background-color : yellow;
+        }
+
+        #p2 {
+            background-color : violet;
+        }
+
+        #p3 {
+            background-color : orangered;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> Cascading Style Sheets - Color property </h1>
+
+    <p id="p1"> This is Para 1</p>
+    <p id="p2"> This is Para 2</p>
+    <p id="p3"> This is Para 3</p>
+
+</body>
+
+</html>
+
+  --------------->
+
+  Types of Colors :
+  ---------------------
+
+  Colors can be represented in 3 formats .
+
+  1) Named Colors 
+
+  2) RGB (Red Green Blue)
+
+  3) Hexadecimal number 
+
+  ------------->
+
+  1) Named Colors :
+  --------------------
+
+     we can write names of colors directly .
+
+     Names of colors are limited .
+
+    with names of colors , we con't get exact shade of the color .
+
+    It is not recomended in real time . 
+
+    Ex:
+        white , black , red , yellow, green orange , pink etc., 
+
+
+    -------->
+    
+    2) RGB :
+    -----------
+
+      RGB formulae specifies that the composition of 3 basic colors.
+
+         RED , GREEN , BLUE 
+
+      RGB Combination generates million of colors . 
+      
+     Syntax:
+     
+        rgb( red, green , blue)
+
+    Red ranges from  0 to 255 
+
+    Greeen ranges from  0 to 255 
+
+    Blue ranges from  0 to 255 
+
+    ------------>
+
+    Ex:
+   -----
+
+     rgb(0,0,0)   :  black color
+
+     rgb(255, 0, 0)  : red color 
+
+     rgb(0, 255, 0) : green color  
+
+     rgb(0, 0, 255) : blue color 
+
+     rgb(255, 255, 0) : yellow color 
+
+     rgb(255, 255, 255) : white color  
+
+   ------------->   
+
+   3) Hexadecimal format :
+   ---------------------------
+
+   Hexadecimal format is the short cut for "RGB".
+
+   Hexadecimal number system supports 16 symbols as ,
+
+       0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f 
+
+
+    Hexadecimal numbers should be 6 symbols long with "#"(hash) prefix .
+    
+    First 2 symbols represents red color 
+
+    Second 2 symbols represents green color 
+
+    Third 2 symbols represents blue color 
+
+    Syntax:
+
+       #redgreenblue 
+
+    Ex:
+    ----
+
+       #ffffff :  white color 
+
+       #000000 : black color 
+
+       #ff0000  : red color 
+
+    Hexadecimal format is recomended in real time .
+    
+ --------------->
+ 
+ Ex:
+
+    Named colors 
+
+                  cssnamedcolors.html 
+    --------------------------------------------------------------    
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>CSS - BACKGROUND COLOR - Named olors </title>
+    <style type="text/css">
+        #p1 {
+            background-color : yellow;
+        }
+
+        #p2 {
+            background-color : violet;
+        }
+
+        #p3 {
+            background-color : orangered;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> Cascading Style Sheets - Color property </h1>
+
+    <p id="p1"> This is Para 1</p>
+    <p id="p2"> This is Para 2</p>
+    <p id="p3"> This is Para 3</p>
+
+</body>
+
+</html>
+
+ --------------->
+
+ Ex:
+ ------
+
+    Hexadecimal colors 
+
+                csshexa.html 
+        -------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>CSS - BACKGROUND COLOR - Hexadecimal Colors  </title>
+    <style type="text/css">
+        #p1 {
+            background-color : #6f6f6f; 
+        }
+
+        #p2 {
+            background-color : #5fff5e;
+        }
+
+        #p3 {
+            background-color : #6fdca3; 
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> Cascading Style Sheets - Color property </h1>
+
+    <p id="p1"> This is Para 1</p>
+    <p id="p2"> This is Para 2</p>
+    <p id="p3"> This is Para 3</p>
+
+</body>
+
+</html>
+
+------------>
+
+Ex:
+---------
+
+   RGB Colors 
+
+                 cssrgb.html 
+        ----------------------------------
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>CSS - BACKGROUND COLOR - RGB Colors  </title>
+    <style type="text/css">
+        #p1 {
+            background-color : rgb(240, 250, 160) ;
+        }
+
+        #p2 {
+            background-color : rgb(0, 220, 175);
+        }
+
+        #p3 {
+            background-color : rgb(150, 125, 255);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> Cascading Style Sheets - Color property </h1>
+
+    <p id="p1"> This is Para 1</p>
+    <p id="p2"> This is Para 2</p>
+    <p id="p3"> This is Para 3</p>
+
+</body>
+
+</html>
+    
+        
+
+
+ --------------->
+
+ Font Syles :
+ ----------------
+
+   There are different properties for the Font.
+
+   1) font-style 
+
+   2) font-weight 
+
+   3) font-size 
+
+   4) font-family 
+
+
+   ---------->
+
+   1) font-style :
+   -----------------
+
+   It is having 3 values .
+
+   1) normal style   
+
+           This is the default property . If we are not giving , it will consider this value. 
+
+   2) Italic style 
+
+   3) Oblique style 
+
+              This is similar to italic .
+
+
+   ------------>
+   
+   2) font-weight  :
+   -----------------------
+
+    It is having 2 values .
+
+    1) normal style 
+
+       This is default property . If we are not applied any thiong , b y default it will apply this property. 
+
+    2) bold style 
+
+      Syntax:
+
+          font-weight : normal / bold;
+
+      Ex:
+      
+         font-weight : bold;     
+
+   --------->
+
+    3) font-size :
+    ------------------
+
+      This property specifies size of the font. 
+
+      we can specify the font size in the form of pixels / percentage / "EM" size . 
+
+     Suntax:
+
+          font-size : pixels ;
+
+    Ex:
+    
+      font-size : 30px;        
+
+    
+
+    ---------->
+
+    4) font-family :
+    ------------------
+
+       This property specifies name of the font. 
+
+      There are somany font families are there .
+
+      Font family names are,
+
+        Arial, Courier , Serif ,  Sans-serif etc.,
+
+        Syntax:
+
+             font-family : "fontname";
+
+        Ex:
+        
+           font-family : Arial ;      
+
+
+     It is recomended to specify multiple font family names .
+     
+     If the specified browser tries the subsequent font , if the previous font is not found or not supported in the browser. Finaly it will apply only one font family .
+
+     So depending upon the browser compatability , it will select one among multiple font families. 
+
+     If font family contains multiple words , then we have to specify that with double quotes. 
+
+     For example ., 
+
+               "Times New Roman" : it is a single font family name , we have to enclose with double quotes. 
+
+               Otherwise no need to enclose with double quotes. 
+
+        Syntax: 
+        
+           font-family :  font family names with camma separated; 
+
+       Ex:
+       
+         font-family :   Arial,  serif, sans-serif, 'Times New Roman' ;           
+
+
+     ---------->
+     
+     Ex:
+     ---
+
+     Apply fonts to a "p" tag,
+
+        p {
+
+         font-style : italic;
+
+         font-weight : bold ;
+
+         font-size : 30px ;
+
+         font-family : Arial;
+      }
+
+      Like this we have to apply in CSS .
+
+
+      --------------------->
+
+      Ex  :
+      ------
+
+                     fonts.html 
+        --------------------------------------------
+        
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>CSS - font-family </title>
+
+    <style type="text/css">
+    p {
+
+        font-style : italic;
+
+        font-weight : bold ;
+
+        font-size : 30px ;
+
+        font-family : Arial;
+     }
+    </style>
+    
+</head>
+<body>
+
+    <h1> Font Styles</h1>
+
+    <p>  Font styles applied here </p>
+
+
+    
+</body>
+</html>
+
+----------------------->
+
+Instead of writing all these properties line by line , we can give in a single line called 
+
+short hand property ,
+
+
+p {
+
+    font : italic bold 30px   Arial, Sarif, sans-sarif , courier 
+
+}   
+
+Here we have to follow the same order as we specified above.
+
+Only in the case of font-family we can give multiple names with cama separated . 
+Depending on the browser compatablity it will apply one font family name only. 
+It will follow the order . 
+
+------------->
+
+  Ex:
+  -------
+
+                 font2.html 
+        ----------------------------------
+        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>CSS - font-family </title>
+
+    <style type="text/css">
+   p {
+
+        font : italic bold 50px   Arial, Sarif, sans-sarif , courier; 
+
+    }   
+
+    </style>
+    
+</head>
+<body>
+
+    <h1> Font Styles</h1>
+
+    <p>  Font styles applied here </p>
+
+
+    
+</body>
+</html>
+  ------------------->
+
+  Ex:
+  ----
+
+    Applying font family only on "p" tag .
+
+                font.html 
+        ---------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>CSS - font-family </title>
+
+    <style type="text/css">
+   p {
+
+        font-family :  Courier , Arial,  serif, sans-serif, 'Times New Roman' 
+
+    }   
+
+    </style>
+    
+</head>
+<body>
+
+    <h1> Font Styles</h1>
+
+    <p>  Font styles applied here </p>
+
+
+    
+</body>
+</html>
+
+------------>
+
+Ex:
+
+    Apply font-family and font-style to "p" tag .
+
+    we can give normal or italic or Oblique 
+
+                   fontstyle.html 
+    ------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>CSS - font-family </title>
+
+    <style type="text/css">
+   p {
+
+        font-family :  Courier , Arial,  serif, sans-serif, 'Times New Roman' ;
+        font-style : oblique  ;
+
+    }   
+
+    </style>
+    
+</head>
+<body>
+
+    <h1> Font Styles</h1>
+
+    <p>  Font styles applied here </p>
+
+
+    
+</body>
+</html>
+
+  ------------------>
+
+  Ex:
+  ----
+
+   Apply font-family , font-style and font-weight  to "p" tag .
+
+                   fonts.html 
+        ------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>CSS - font-family </title>
+
+    <style type="text/css">
+   p {
+
+        font-family :   Arial,  serif, sans-serif, 'Times New Roman' ;
+        font-style : oblique  ;
+        font-weight: bold;
+
+    }   
+
+    </style>
+    
+</head>
+<body>
+
+    <h1> Font Styles</h1>
+
+    <p>  Font styles applied here </p>
+
+
+    
+</body>
+</html>
+
+  ------------>
+
+  EX:
+ ----
+
+   Apply font-family , font-style ,  font-weight and font-size  to "p" tag .
+
+               fonts.html
+       -----------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>CSS - font-family </title>
+
+    <style type="text/css">
+   p {
+
+        font-family :   Arial,  serif, sans-serif, 'Times New Roman' ;
+        font-style : oblique  ;
+        font-weight: bold;
+        font-size: 50px;
+
+    }   
+
+    </style>
+    
+</head>
+<body>
+
+    <h1> Font Styles</h1>
+
+    <p>  Font styles applied here </p>
+
+
+    
+</body>
+</html>
+
+ ----------------------------->
+
+  We can apply CSS styles in three ways.
+
+  1) Inline Style Sheets 
+
+      Styles applied to one line or one tag .
+
+  2)  Internal Style sheets 
+
+      Styles applied to One entire web page . 
+
+  3) External Style Sheets 
+
+      Styles applied to One or more web pages .
+
+
+   ------------------------>
+
+
+   HTML <span> Tag :
+   -----------------
+
+     The <span> tag is an inline container used to mark up a part of a text, or a part of a document.
+
+     The <span> tag is easily styled by CSS or manipulated with JavaScript using the class or id attribute.
+
+     The <span> tag is much like the <div> element, but <div> is a block-level element and <span> is an inline element.
+
+
+     Ex :
+     -----
+
+                    span.html
+        --------------------------------------------
+        
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>CSS - font-family </title>
+
+</head>
+
+<body>
+
+    <h1> Font Styles</h1>
+
+    <h1>The span element</h1>
+
+    <p>
+        My mother has <span style="color:blue;font-weight:bold">blue</span> eyes and
+        my father has <span style="color:darkolivegreen;font-weight:bold">dark green</span> eyes.
+
+    </p>
+
+</body>
+
+</html>                   
+
+
+
+
+
+   ---------------->
+
+
+    1) Inline Style Sheets :
+    -----------------------------
+
+      Styles applied to one line or one tag .
+
+
+      We can apply inline styling, by 'style' attribute.
+
+
+      Ex-1:
+      -------
+
+                  inline.html 
+
+         ------------------------------------------------------
+
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>CSS - font-family </title>
+
+</head>
+
+<body>
+
+    <h1> Font Styles</h1>
+
+    <h1>The span element</h1>
+
+    <span style="color:red">  Sachin  </span> 
+    <span style="color:red">  Dhoni  </span>
+    <span style="color: red">  Dravid </span>
+    
+
+
+</body>
+
+</html>
+       
+     ------------------------->
+
+     Ex:2 
+     --------
+
+
+                    inline.html 
+          -----------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>CSS - font-family </title>
+
+</head>
+
+<body>
+
+    <h1> Font Styles</h1>
+
+    <h1>The span element</h1>
+
+    <p>
+        My mother has <span style="color:blue;font-weight:bold">blue</span> eyes and
+        my father has <span style="color:darkolivegreen;font-weight:bold">dark green</span> eyes.
+
+    </p>
+
+</body>
+
+</html>
+
+  ----------------------->
+
+  Drawbacks Inline Styles:
+  ------------------------------
+
+  We are using duplicate code at element level, If you observe in the above example, 
+
+  we are using "color:red" multiple times.
+
+  Making changes are very costly. For example if we have 100 span elemets with red color. 
+
+  If you want to change that color red to blue, we have to go to that element and change color red to blue.
+
+  To overcome this draw back , we go for "Internal Style sheets"
+
+  ---------------------> 
+
+   2)  Internal Style sheets :
+   -------------------------------
+
+    We can apply internal styling, by 'style' tag.
+
+    Styles applied to One entire web page . 
+
+    We wrote internal styling at page level
+
+    Syntax:
+
+            selector {
+
+                property key:value;
+                property key:value
+           
+            }
+
+
+    Ex:
+    ----
+
+       span {
+
+            color:red
+      }
+
+   ---------------------->
+
+                 inline.html 
+    --------------------------------------------
+    
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>CSS - font-family </title>
+
+</head>
+
+<style>
+        span {
+
+            color : red
+            
+        }
+
+</style>
+
+
+<body>
+
+    <h1> Font Styles</h1>
+
+    <h1>The span element</h1>
+
+    <span > Sachin </span> 
+    <span > Dhoni </span>
+    <span > Dravid </span>
+    
+
+
+</body>
+
+</html>
+
+ --------------------->   
+
+ Drawbacks in Internal Style :
+ ----------------------------------
+
+ For example more than one html page is using Internal Style,
+ 
+
+      1)          one.html
+        -------------------------------------    
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>One -  Internal style </title>
+
+    <style type="text/css">
+        span {
+            color:red
+       }
+
+    </style>
+
+</head>
+<body>
+
+    <h1> Internal style </h1>
+
+    <span> Sachin </span>
+    <span> Dhoni </span>
+    <span> Dravid </span>
+    
+    
+</body>
+</html>
+ ----------------->       
+
+ 2)                two.html 
+   ---------------------------------------------------
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title> TWO - Internal Style </title>
+
+    <style type="text/css">
+        span {
+            color:red
+       }
+
+    </style>
+
+</head>
+<body>
+
+    <h1> Internal style </h1>
+
+    <span> Sachin </span>
+    <span> Dhoni </span>
+    <span> Dravid </span>
+
+    
+</body>
+</html>
+
+ ----------------------->
+
+    We are using duplicate code at page level, If you observe in the above example, 
+
+    we are using "color:red" multiple times.
+
+    Making changes are very costly. 
+
+    For example if we have 100 html pages in your application, all pages having color red to span.
+
+     If you want to change that color red to blue, we have to go to that page and change color red to blue.
+
+------------------------>
+
+3) External Style Sheets : 
+----------------------------
+
+
+    Styles applied to One or more web pages .
+
+    So "Inline styling"  and "Internal Styling" is not recomended.
+        
+    To apply external styling, first create one ".css" file, 
+
+    keep your css poperties in that file.
+
+    Load that ".css" file into your ".html" file using "link tag". 
+
+    The required "rel" attribute specifies the "relationship between the current document and 
+
+    the linked document/resource".
+
+    syntax:
+    ----------
+
+      Create a ".css" file 
+
+                    styles.css 
+            ------------------------------
+
+            selector {
+
+                    property key:value;
+                    property key:value
+            }
+
+        Ex:
+        ------
+
+           1)          styles.css 
+            -------------------------------
+
+            span {
+                   color:red
+            }
+
+    -------------------->
+
+
+    2)                           
+                    one.html 
+           -----------------------------------
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>One -  Internal style </title>
+
+    <link rel='stylesheet' href="styles.css" >
+
+    
+
+</head>
+<body>
+
+    <h1> Internal style </h1>
+
+    <span> Sachin </span>
+    <span> Dhoni </span>
+    <span> Dravid </span>
+    
+    
+</body>
+</html>
+
+ -------------------->        
+
+ 3) 
+                two.html 
+        --------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title> TWO - Internal Style </title>
+
+    <link rel='stylesheet' href="styles.css" >
+
+</head>
+<body>
+
+    <h1> Internal style </h1>
+
+    <span> Sachin </span>
+    <span> Dhoni </span>
+    <span> Dravid </span>
+
+    
+</body>
+</html>
+
+ ========================================================================================
+
+
+        
+
+                    
+
+    
+
+
+                         
+
+
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+       
+
+
+
+
+        
+
+
+
+
+
+
+    
+
+
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+ 	    
+
+
+
+
+
+
+
+
+
+   
+
+
+
+ 
+
+
+
+
+
+

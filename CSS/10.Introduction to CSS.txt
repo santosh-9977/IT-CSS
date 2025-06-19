@@ -1,0 +1,816 @@
+
+
+
+Introduction to CSS:
+-----------------------
+
+HTML (HyperText Markup Language) is the structure.
+
+Ex:
+   It defines the content and the parts of your house.
+   where doors, windows , walls are comming etc., 
+
+------> 
+
+CSS (Cascading Style Sheets) is the decoration and design  
+
+Ex:
+
+   the paint color, the furniture, the style of the windows, and the landscaping. It makes the house look good.
+
+
+ -------->     
+
+JavaScript is the interactivity.
+
+   Ex:
+
+     light switches , door openers etc., 
+
+ 		It makes the house functional.   
+
+--------->
+
+HTML :  
+
+		presentation of a document written in a markup language like HTML
+
+CSS :
+
+   CSS tells the browser how to display the HTML elements on a page.
+
+
+--------->
+
+How to Add CSS to a Web Page ?
+-------------------------------
+
+There are three ways to include CSS in your HTML, but one is strongly preferred. 
+
+
+1) External Stylesheet (Best Practice) 
+
+2) Internal Stylesheet
+
+3) Inline Styles 
+
+---------->
+
+1) External Stylesheet :
+------------------------
+
+This is the standard and most efficient method. 
+
+You create a separate file with a .css extension (e.g., styles.css) and link to it from your HTML file.
+
+
+    1)             index.html 
+       ----------------------------------------------
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+
+	  <title>My Awesome Website</title>
+
+	  <link rel="stylesheet" href="styles.css">
+	
+	</head>
+	<body>
+	    
+	    <h1> This is an External Stylesheet Example  </h1> 
+
+
+	    <p> This is Para 1</p>
+	    <p> This is Para 2</p>
+	    <p> This is Para 3</p>
+
+    	<div> This is div tag </div>
+
+
+	</body>
+	</html>
+
+---> 
+
+  2)              styles.css 
+           -----------------------------------
+
+        h1 {
+            color: red;
+        }
+
+        p {
+            color: rgb(0, 255, 0);
+        }
+
+        div {
+            color: rgb(0, 0, 255)
+        }
+        
+-------------------> 
+
+Note:
+
+This <link> tag in the <head> section tells the browser to load the styles.css file.
+
+-------------->
+
+2. Internal Stylesheet :
+---------------------------
+
+You can place CSS rules directly inside your HTML file
+within a <style> tag in the <head> section. 
+
+This is useful for single-page websites or very specific styles that won't be used anywhere else.
+
+
+Ex:
+
+   1)                   index2.html 
+   -------------------------------------------------------------------
+
+		<!DOCTYPE html>
+		<html>
+		<head>
+		  <title>My Awesome Website</title>
+		  <style>
+		    body {
+		      background-color: lightblue;
+		    }
+		    h1 {
+		      color: navy;
+		    }
+		  </style>
+		</head>
+		<body>
+
+			<h1> This is an External Stylesheet Example  </h1> 
+
+
+	    	<p> This is Para 1</p>
+	    	<p> This is Para 2</p>
+	    	<p> This is Para 3</p>
+
+    		<div> This is div tag </div>
+
+		
+		</body>
+		</html>
+
+---------------> 
+
+3. Inline Styles :
+---------------------
+
+You can apply styles directly to a specific HTML element using the style attribute. 
+
+This is generally discouraged because it mixes content and presentation, making 
+maintenance difficult. 
+
+It's usually reserved for very specific, one-off situations.
+
+
+---->
+
+Ex:
+
+ <h1 style="color: blue; text-align: center;">This is a Blue, Centered Heading</h1>
+
+------------>
+
+The Basic Syntax of a CSS Rule :
+-----------------------------------
+
+A CSS rule is made up of two main parts: 
+
+  1)  selector 
+  2)  declaration block.
+
+-------->
+
+1)  Selector: 
+
+   This "selects" the HTML element(s) you want to style.
+   It can be an element name (h1), a class (.my-class), or an ID (#unique-id).
+
+2) Declaration Block: 
+
+    This is enclosed in curly braces {}. It contains one or more declarations.
+
+3) Declaration: 
+
+    A single rule, like "color: blue;" .   It consists of a property and a value.
+
+    Property: The style attribute you want to change (e.g., font-size, background-color).
+
+    Value: The setting for that property (e.g., 16px, red).
+
+   Each declaration must end with a semicolon ;.
+
+------------>
+
+Ex:
+
+                   index3.html 
+    ------------------------------------------
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning CSS</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+    <h1>Welcome to My Website</h1>
+
+    <p>This is a paragraph about the power of CSS. We can change fonts, colors, and so much more.</p>
+
+    <div class="highlight-box">
+        <p>This paragraph is inside a box that we will give a special style!</p>
+    </div>
+
+</body>
+</html>
+
+-------->
+
+2)                  styles2.css
+         ---------------------------------------------
+
+
+/* This is a CSS comment. It's ignored by the browser. */
+
+/* Style the entire page */
+body {
+    
+    font-family: Arial, sans-serif;
+    
+    background-color: #f4f4f4; /* A light grey background */
+    
+    color: #333; /* A dark grey for text */
+}
+
+/* Style all <h1> elements */
+h1 {
+    color: #005A9C; 	/* A nice blue color for the main heading */
+    text-align: center;
+}
+
+/* Style all <p> elements */
+
+p {
+    line-height: 1.6; /* Increases the space between lines of text */
+}
+
+/* Style only the element with the class="highlight-box" */
+
+.highlight-box {
+
+    background-color: #fff8e1; /* A light yellow background */
+
+    border: 1px solid #ffc107; /* A solid yellow border */
+
+    padding: 20px; 	/* Adds space inside the box */
+
+    margin-top: 30px; /* Adds space outside the box, on top */
+}
+
+--------------> 
+
+ Common CSS Properties :
+----------------------------
+
+    Text     : color, font-family, font-size, font-weight, text-align
+
+    Box model: width, height, margin, padding, border
+
+    Layout   : display, position, float, flex, grid
+
+    Visual   : background, opacity, box-shadow, transform
+
+  -------------->
+  
+  5. Selectors :
+  ---------------
+
+    Element: p, h1, div
+
+    Class: .className (matches class="className")
+
+    ID: #idName (matches id="idName")
+
+    Attribute: [type="text"]
+
+    Pseudo-classes: :hover, :focus, :nth-child()
+
+  ---------->
+
+  6. The Box Model :
+  ---------------------
+
+	Every element is a box with:
+
+    Content (text, images)
+
+    Padding (space inside the border)
+
+    Border (edge around padding)
+
+    Margin (space outside the border)
+
+---------->
+
+7. Responsive Design :
+--------------------------
+
+Use media queries to adapt layouts:
+
+
+@media (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+---------->
+
+CSS works with HTML to create visually appealing, well-structured websites
+
+-----------------> 
+
+Ex:
+----
+
+		HTML & CSS  Responsive Design 
+
+   1)        ResposiveDesign.html 
+    -------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Responsive Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to our site!</h2>
+            <p>This layout adjusts to your screen size.</p>
+        </section>
+
+        <section class="features">
+            <article>
+                <h3>Feature One</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h3>Feature Two</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <h3>Feature Three</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+  -------->     
+    
+    2)            styles.css 
+      -----------------------------------------------------------
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: #35424a;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.hero {
+    background: #e8491d;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.features article {
+    flex: 1;
+    min-width: 300px;
+    margin: 1rem;
+    padding: 1rem;
+    background: #f4f4f4;
+    border-radius: 5px;
+}
+
+footer {
+    background: #35424a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav a {
+        display: block;
+        padding: 0.5rem;
+    }
+    
+    .features article {
+        flex: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+------------------------>       
+
+How It Responds to Different Screen Sizes:
+----------------------------------------------
+    
+
+    Large screens (desktop): 
+          Displays all three feature articles in a row
+
+    Medium screens (tablet): 
+
+        Navigation changes to vertical layout, feature articles may wrap
+
+    Small screens (mobile): 
+
+       Single column layout, reduced font sizes for better readability
+
+
+--------------------------> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

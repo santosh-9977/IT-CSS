@@ -1,0 +1,48 @@
+First time push the files to GITHUB :
+ -------------------------------------
+
+  1) $ git init
+
+  2) $ git status
+
+  3) $ git add .
+
+  4) $ git status
+
+  5) $ git commit -m "First Commit"
+
+  6) $ git status
+
+  7) $ git branch -M main
+
+  8) $ git remote add origin https://github.com/Sreee999/IT-CSS.git
+
+  
+  9) $ git push -u origin main
+
+
+--------------------------->  
+
+2)
+
+  After creation of new files or updating any files :
+  ----------------------------------------------------
+
+
+   1) $ git status
+
+  2) $ git add .
+
+  3) $ git status
+
+  4) $ git commit -m "Second Commit"
+
+  5) $ git push
+
+  -------------------------> 
+
+  
+ 
+
+
+
